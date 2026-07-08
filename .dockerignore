@@ -1,6 +1,32 @@
-venv/
+# Python cache
 __pycache__/
 *.pyc
-.git
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# Git
+.git/
 .gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Tests
+tests/
+.pytest_cache/
+
+# Documentation
 README.md
+
+# macOS
+.DS_Store
