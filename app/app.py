@@ -1,11 +1,9 @@
-from flask import Flask
+from flask import Flask, render_template
 
 from config import Config
 from database import db
 from models import Employee
 from routes import employee_bp
-from flask import Flask, render_template
-
 
 app = Flask(__name__)
 
@@ -14,11 +12,9 @@ app.config.from_object(Config)
 
 # Initialize SQLAlchemy
 db.init_app(app)
-app.register_blueprint(employee_bp)
 
-# Create database tables (only if they don't already exist)
-with app.app_context():
-    db.create_all()
+# Register Blueprint
+app.register_blueprint(employee_bp)
 
 
 @app.route("/")
@@ -34,4 +30,8 @@ def health():
 
 
 if __name__ == "__main__":
+    # Create database tables only when running the application
+    with app.app_context():
+        db.create_all()
+
     app.run(host="0.0.0.0", port=5000, debug=True)

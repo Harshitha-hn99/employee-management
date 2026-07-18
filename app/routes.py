@@ -78,12 +78,11 @@ def update_employee(id):
     employee = Employee.query.get_or_404(id)
 
     data = request.get_json()
-
-    employee.name = data["name"],
-    email=data["email"],
-    employee.department = data["department"],
+    employee.name = data["name"]
+    employee.email = data["email"]
+    employee.department = data["department"]
     employee.salary = data["salary"]
-
+    
     db.session.commit()
 
     return jsonify({
