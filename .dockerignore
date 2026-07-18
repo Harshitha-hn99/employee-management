@@ -21,10 +21,6 @@ venv/
 # Logs
 *.log
 
-# Tests
-tests/
-.pytest_cache/
-
 # Documentation
 README.md
 
