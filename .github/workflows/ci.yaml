@@ -25,3 +25,7 @@ jobs:
       - name: Run Pytest
         run: |
           python -m pytest -v
+
+      - name: Create Docker image
+        run: |
+           docker build -t employee-management .    
