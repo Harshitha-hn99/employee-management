@@ -1,9 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template    
 
-from config import Config
-from database import db
-from models import Employee
-from routes import employee_bp
+from app.config import Config
+from app.database import db
+from app.models import Employee
+from app.routes import employee_bp
+
 
 app = Flask(__name__)
 
