@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  Employee-management:
+  employee-management:
     runs-on: ubuntu-latest
 
     steps:
