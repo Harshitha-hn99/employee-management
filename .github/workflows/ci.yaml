@@ -28,4 +28,8 @@ jobs:
 
       - name: Create Docker image
         run: |
-           docker build -t employee-management .    
+           docker build -t employee-management .
+           
+      - name: check image
+        run: |
+          docker images    
